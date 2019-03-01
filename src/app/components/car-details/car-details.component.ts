@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CarsService } from 'src/app/services/cars/cars.service';
 import { CarDetail } from 'src/app/models/carDetail';
 import { ActivatedRoute } from '@angular/router';
-import {FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
-import {Router} from '@angular/router';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { BookingService } from 'src/app/services/booking/booking.service';
 import { Booking } from 'src/app/models/booking';
 
@@ -15,6 +15,7 @@ import { Booking } from 'src/app/models/booking';
 export class CarDetailsComponent implements OnInit {
 
   showCar = true;
+  showNoCarError = false;
   dateInvalid = false;
   dateInThePast = false;
   car: CarDetail;
@@ -27,7 +28,7 @@ export class CarDetailsComponent implements OnInit {
   secondFormGroup: FormGroup;
   startDateFormControl = new FormControl(this.startDate);
   constructor(private carService: CarsService, private bookingService: BookingService,
-     private route: ActivatedRoute, private formBuilder: FormBuilder, private router: Router) { }
+    private route: ActivatedRoute, private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit() {
     this.loadCarDetails();
@@ -50,16 +51,18 @@ export class CarDetailsComponent implements OnInit {
   loadCarDetails() {
     this.route.params.subscribe(params => {
       this.id = params['id'];
-      this.carService.getCarById(this.id).subscribe( car => {
+      this.carService.getCarById(this.id).subscribe(car => {
         this.car = car;
-        console.log(car);
+      }, (error) => {
+        this.showNoCarError = true;
+        console.error(error);
       });
-      });
+    });
   }
 
   onChangeDate(pickedDate: Date) {
 
-    if ( !pickedDate || !(pickedDate instanceof Date)) {
+    if (!pickedDate || !(pickedDate instanceof Date)) {
       this.dateInvalid = true;
       return;
     }
@@ -94,8 +97,8 @@ export class CarDetailsComponent implements OnInit {
   }
 
   onConfirmBooking() {
-    const booking: Booking = {startDate: this.startDate, endDate: this.endDate, carId: this.car.id};
-    this.bookingService.addBooking(booking).subscribe( _ => {
+    const booking: Booking = { startDate: this.startDate, endDate: this.endDate, carId: this.car.id };
+    this.bookingService.addBooking(booking).subscribe(_ => {
       const router = Router;
       this.router.navigateByUrl('/bookings');
     });
@@ -112,7 +115,7 @@ export class CarDetailsComponent implements OnInit {
     const date = new Date(oldDate);
     const timeArr = time.split(':');
     const hours = timeArr[0];
-    const minutes = timeArr [1];
+    const minutes = timeArr[1];
     date.setHours(Number.parseInt(hours, 10));
     date.setMinutes(Number.parseInt(minutes, 10));
     return date;

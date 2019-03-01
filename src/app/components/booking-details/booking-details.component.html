@@ -2,20 +2,23 @@
   <div class="headline-container">
     <h1 i18n="@@bookingDetailsHeader">Booking</h1>
   </div>
-    <mat-card class="booking-details-card">
-        <mat-card-header>
-          <div mat-card-avatar><i class="fas fa-info booking-details-icon"></i></div>
-          <mat-card-title i18n="@@bookingDetailsCardTitle" >Details</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p>
-            <span i18n="@@startDate"> Start Date: </span> {{booking.startDate | date}}
-          </p>
-          <p>
-            <span i18n="@@endDate"> End Date: </span>{{booking.endDate | date}}
-          </p>
-        </mat-card-content>
-      </mat-card>
-  <app-car-information name="{{car.name}}" description="{{car.description}}" image="{{car.image}}" shortDescription="{{car.shortDescription}}" ></app-car-information>
+  <div *ngIf="showNoBookingError"> <h2> Error: No Booking found for this ID!</h2></div>
+  <mat-card *ngIf="booking" class="booking-details-card">
+    <mat-card-header>
+      <div mat-card-avatar><i class="fas fa-info booking-details-icon"></i></div>
+      <mat-card-title i18n="@@bookingDetailsCardTitle">Details</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        <span i18n="@@startDate"> Start Date: </span> {{booking.startDate | date}}
+      </p>
+      <p>
+        <span i18n="@@endDate"> End Date: </span>{{booking.endDate | date}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <app-car-information *ngIf="car" name="{{car.name}}" description="{{car.description}}" image="{{car.image}}"
+    shortDescription="{{car.shortDescription}}"></app-car-information>
+  <div *ngIf="showNoCarError"> <h2> Error: No Car found for this Booking!</h2></div>
 
 </div>

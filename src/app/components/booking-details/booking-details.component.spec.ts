@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, flushMicrotasks, fakeAsync } from '@angular/core/testing';
 
 import { BookingDetailsComponent } from './booking-details.component';
 import { MatCardModule } from '@angular/material';
@@ -9,7 +9,6 @@ import { Booking } from 'src/app/models/booking';
 
 describe('BookingDetailsComponent', () => {
   let component: BookingDetailsComponent;
-  let fixture: ComponentFixture<BookingDetailsComponent>;
   const getCarStubValue: CarDetail = {
     'id': 3,
     'name': 'The intive_Kupferwerk car',
@@ -23,22 +22,6 @@ describe('BookingDetailsComponent', () => {
       endDate: new Date('04/05/2020 13:00' ),
       carId: 3
     };
-
-    const getBookingsStubValue: Booking [] = [
-      {
-        id: 1,
-        startDate: new Date('04/04/2020 13:00'),
-        endDate: new Date('04/05/2020 13:00' ),
-        carId: 3
-      },
-      {
-        id: 2,
-        startDate: new Date('03/04/2019 13:00'),
-        endDate: new Date('03/06/2019 13:00' ),
-        carId: 3
-      }
-    ];
-
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -61,4 +44,24 @@ describe('BookingDetailsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should load a car from the car service', fakeAsync(() => {
+    component.ngOnInit();
+    flushMicrotasks();
+
+    const expected = getCarStubValue;
+    const actual = component.car;
+
+    expect(actual).toEqual(expected);
+  }));
+
+  it('should load a booking from the booking service', fakeAsync(() => {
+    component.ngOnInit();
+    flushMicrotasks();
+
+    const expected = getBookingByIdStubValue;
+    const actual = component.booking;
+
+    expect(actual).toEqual(expected);
+  }));
 });

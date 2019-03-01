@@ -12,6 +12,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BookingDetailsComponent implements OnInit {
 
+  showNoBookingError = false;
+  showNoCarError = false;
   car: CarDetail;
   booking: Booking;
   id: number;
@@ -28,9 +30,13 @@ export class BookingDetailsComponent implements OnInit {
         this.booking = booking;
         this.carService.getCarById(this.booking.carId).subscribe(car => {
           this.car = car;
-          console.table(car);
-          console.table(booking);
+        }, (error) => {
+          this.showNoCarError = true;
+          console.error(error);
         });
+      }, (error) => {
+        this.showNoBookingError = true;
+        console.error(error);
       });
     });
   }

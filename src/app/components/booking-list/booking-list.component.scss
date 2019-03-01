@@ -1,0 +1,8 @@
+@import './../../../partials/breakpoints';
+
+
+@include breakpoint(mobile) {
+    button{
+        padding: 0px;
+    }
+}

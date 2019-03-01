@@ -75,7 +75,6 @@ describe('CarDetailsComponent', () => {
     const actual = component.changeTimeOfDay(givenStartDate, givenTime);
 
     expect(actual).toEqual(expected);
-
   });
 });
 

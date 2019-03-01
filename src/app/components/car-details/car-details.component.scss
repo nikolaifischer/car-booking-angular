@@ -1,3 +1,4 @@
+@import './../../../partials/breakpoints';
 .car-card-button-container{
     text-align: center;
     margin-top: 20px;
@@ -7,6 +8,30 @@
     display: inline-block;
 }
 
-.booking-start-time{
+.booking-start-time {
     margin-left: 30px;
+}
+
+.start-time-input {
+    margin-left: 40px;
+}
+
+.booking-button {
+    margin: 10px;
+}
+.stepper-group {
+    min-height: 220px;
+}
+
+@include breakpoint(mobile) {
+    .start-date-form-group {
+        display: flex;
+        flex-direction: column;
+    }
+    .mat-step-header{
+        font-size: 4px !important;
+    }
+    .start-time-input {
+        margin-left: 0px;
+    }
 }

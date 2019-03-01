@@ -3,12 +3,10 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
-    crossorigin="anonymous">
 </head>
 <body>
   <mat-toolbar class="mat-elevation-z6" color="primary">
-    <span i18n="@@app-name">Car Booking</span>
+    <span i18n="@@app-name" class="app-name">Car Booking</span>
   </mat-toolbar>
   <nav mat-tab-nav-bar>
     <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive #rla="routerLinkActive"

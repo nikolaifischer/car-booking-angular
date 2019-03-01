@@ -15,12 +15,22 @@ body {
     max-width: 60%;
   }
 
+  @include breakpoint(mobile) {
+    .content {
+        max-width: 100%;
+    }
+}
+
   .app-bottom-spacer {
     min-height: 900px;
   }
 
   .homepage-decor {
      background-color: $primary;
+  }
+
+  .app-name {
+    margin-left: 10px;
   }
 
 

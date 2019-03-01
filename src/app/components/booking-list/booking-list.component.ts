@@ -13,7 +13,6 @@ export class BookingListComponent implements OnInit {
 
   upcomingBookings: Booking[];
   oldBookings: Booking[];
-  cars: CarDetail[];
   carLookUp = new Map<Booking, CarDetail>();
 
   constructor(private bookingService: BookingService, private carService: CarsService) { }
@@ -44,7 +43,6 @@ export class BookingListComponent implements OnInit {
     return this.carLookUp.get(booking);
   }
 
-  // ToDo: Test
   filterBookings(bookings: Booking [], upcoming: boolean): Booking [] {
     let filtered: Booking [];
     if (upcoming) {

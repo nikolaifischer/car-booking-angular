@@ -4,17 +4,17 @@
   </div>
   <mat-list>
     <h3 mat-subheader i18n="@@upComingBookingsListHeader">Upcoming Bookings</h3>
-    <mat-list-item *ngFor="let booking of upcomingBookings">
+    <mat-list-item class="upcoming-booking" *ngFor="let booking of upcomingBookings">
       <h4 mat-line *ngIf="getCarForBooking(booking)">{{getCarForBooking(booking).name}}</h4>
       <p mat-line> {{booking.startDate | date}} - {{booking.endDate | date}} </p>
-      <button mat-raised-button routerLink="./details/{{booking.id}}" i18n="@@viewDetails">VIEW DETAILS</button>
+      <button mat-raised-button routerLink="./details/{{booking.id}}" i18n="@@viewDetails"> DETAILS</button>
     </mat-list-item>
     <mat-divider></mat-divider>
     <h3 mat-subheader i18n="@@pastBookingsListHeader">Past Bookings</h3>
-    <mat-list-item *ngFor="let booking of oldBookings">
+    <mat-list-item class="past-booking" *ngFor="let booking of oldBookings">
       <h4 mat-line *ngIf="getCarForBooking(booking)">{{getCarForBooking(booking).name}}</h4>
       <p mat-line> {{booking.startDate | date}} - {{booking.endDate | date}} </p>
-      <button mat-raised-button routerLink="./details/{{booking.id}}" i18n="@@viewDetails">VIEW DETAILS</button>
+      <button mat-raised-button routerLink="./details/{{booking.id}}" i18n="@@viewDetails">DETAILS</button>
     </mat-list-item>
   </mat-list>
 </div>

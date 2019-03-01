@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed, flushMicrotasks, fakeAsync } from '@angular/core/testing';
+import { async,  TestBed, flushMicrotasks, fakeAsync } from '@angular/core/testing';
 
 import { CarListComponent } from './car-list.component';
 import { MatCardModule } from '@angular/material';

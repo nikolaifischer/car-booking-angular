@@ -20,6 +20,7 @@
       </trans-unit>
       <trans-unit id="weclomeCTA" datatype="html">
         <source>Book your favorite car and lets go!</source>
+        <target> Buch dein Lieblingsauto und los gehts! </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">7</context>
@@ -30,6 +31,10 @@
            Phasellus convallis lectus ac molestie venenatis
            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac dui in tortor volutpat blandit nec eu est.
            Phasellus convallis lectus ac molestie venenatis.</source>
+           <target> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac dui in tortor volutpat blandit nec eu est.
+           Phasellus convallis lectus ac molestie venenatis
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac dui in tortor volutpat blandit nec eu est.
+           Phasellus convallis lectus ac molestie venenatis. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">8</context>
@@ -39,6 +44,7 @@
         <source>
         Rides on tap
       </source>
+      <target> Jetzt buchen </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">21</context>
@@ -49,6 +55,8 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac dui in tortor
         volutpat blandit nec eu est. Phasellus convallis lectus ac molestie venenatis.
       </source>
+      <target> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac dui in tortor
+        volutpat blandit nec eu est. Phasellus convallis lectus ac molestie venenatis. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">24</context>
@@ -58,6 +66,7 @@
         <source>
         Fair Prices
       </source>
+      <target> Faire Preise </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">32</context>
@@ -68,6 +77,8 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac dui in tortor
         volutpat blandit nec eu est. Phasellus convallis lectus ac molestie venenatis.
       </source>
+        <target> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac dui in tortor
+        volutpat blandit nec eu est. Phasellus convallis lectus ac molestie venenatis. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">35</context>
@@ -77,6 +88,7 @@
         <source>
         Safety first
       </source>
+        <target> Sichere Fahrzeuge </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">43</context>
@@ -87,6 +99,8 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac dui in tortor
         volutpat blandit nec eu est. Phasellus convallis lectus ac molestie venenatis.
       </source>
+        <target> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac dui in tortor
+        volutpat blandit nec eu est. Phasellus convallis lectus ac molestie venenatis. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">46</context>
@@ -94,6 +108,7 @@
       </trans-unit>
       <trans-unit id="carListHeader" datatype="html">
         <source>Available Cars</source>
+        <target> Verfügbare Fahrzeuge</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/car-list/car-list.component.html</context>
           <context context-type="linenumber">3</context>
@@ -101,6 +116,7 @@
       </trans-unit>
       <trans-unit id="viewDetails" datatype="html">
         <source>VIEW DETAILS</source>
+        <target> Details </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/car-list/car-list.component.html</context>
           <context context-type="linenumber">10</context>
@@ -116,6 +132,7 @@
       </trans-unit>
       <trans-unit id="bookingListHeader" datatype="html">
         <source>My Bookings</source>
+        <target> Meine Buchungen </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/booking-list/booking-list.component.html</context>
           <context context-type="linenumber">3</context>
@@ -123,6 +140,7 @@
       </trans-unit>
       <trans-unit id="upComingBookingsListHeader" datatype="html">
         <source>Upcoming Bookings</source>
+        <target> Zukünfitige Buchungen </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/booking-list/booking-list.component.html</context>
           <context context-type="linenumber">6</context>
@@ -130,6 +148,7 @@
       </trans-unit>
       <trans-unit id="pastBookingsListHeader" datatype="html">
         <source>Past Bookings</source>
+        <target> Vergangene Buchungen </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/booking-list/booking-list.component.html</context>
           <context context-type="linenumber">13</context>
@@ -137,6 +156,7 @@
       </trans-unit>
       <trans-unit id="bookNow" datatype="html">
         <source> BOOK NOW </source>
+        <target> Jetzt Buchen </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
           <context context-type="linenumber">4</context>
@@ -144,6 +164,7 @@
       </trans-unit>
       <trans-unit id="startTime" datatype="html">
         <source>Start Time</source>
+        <target> Start Zeit </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
           <context context-type="linenumber">12</context>
@@ -151,6 +172,7 @@
       </trans-unit>
       <trans-unit id="dateInvalidMsg" datatype="html">
         <source> Please enter a valid date</source>
+        <target> Bitte gebe ein valides Datum an </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
           <context context-type="linenumber">18</context>
@@ -158,6 +180,7 @@
       </trans-unit>
       <trans-unit id="dateInThePastMsg" datatype="html">
         <source> Please enter a date in the future</source>
+        <target> Bitte gebe ein Datum in der Zukunft an </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
           <context context-type="linenumber">19</context>
@@ -165,6 +188,7 @@
       </trans-unit>
       <trans-unit id="back" datatype="html">
         <source>BACK</source>
+        <target> Zurück </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
           <context context-type="linenumber">25</context>
@@ -180,6 +204,7 @@
       </trans-unit>
       <trans-unit id="next" datatype="html">
         <source>NEXT</source>
+        <target> Weiter </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
           <context context-type="linenumber">26</context>
@@ -191,6 +216,7 @@
       </trans-unit>
       <trans-unit id="duration" datatype="html">
         <source>Duration</source>
+        <target> Dauer: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
           <context context-type="linenumber">32</context>
@@ -202,6 +228,7 @@
       </trans-unit>
       <trans-unit id="days" datatype="html">
         <source>days</source>
+        <target> Tage </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
           <context context-type="linenumber">35</context>
@@ -213,6 +240,7 @@
       </trans-unit>
       <trans-unit id="confirm" datatype="html">
         <source>Confirm</source>
+        <target> Bestätigen </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
           <context context-type="linenumber">45</context>
@@ -224,6 +252,7 @@
       </trans-unit>
       <trans-unit id="bookingConfirmationHeader" datatype="html">
         <source>Your Booking:</source>
+        <target> Deine Buchung: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
           <context context-type="linenumber">47</context>
@@ -231,6 +260,7 @@
       </trans-unit>
       <trans-unit id="startDate" datatype="html">
         <source>Start:</source>
+        <target> Start:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
           <context context-type="linenumber">49</context>
@@ -242,6 +272,7 @@
       </trans-unit>
       <trans-unit id="endDate" datatype="html">
         <source>End:</source>
+        <target> Ende: </target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
           <context context-type="linenumber">52</context>
@@ -253,6 +284,7 @@
       </trans-unit>
       <trans-unit id="bookingDetailsHeader" datatype="html">
         <source>Booking</source>
+        <target> Buchung</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/booking-details/booking-details.component.html</context>
           <context context-type="linenumber">3</context>
@@ -260,6 +292,7 @@
       </trans-unit>
       <trans-unit id="bookingDetailsCardTitle" datatype="html">
         <source>Details</source>
+        <target> Details</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/booking-details/booking-details.component.html</context>
           <context context-type="linenumber">8</context>

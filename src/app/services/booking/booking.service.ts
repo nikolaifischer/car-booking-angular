@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Booking } from 'src/app/models/booking';
-import { Observable, of } from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
 
 
 @Injectable({
@@ -12,15 +12,15 @@ export class BookingService {
     // Seeds old booking data to local storage
     this.getBookings().subscribe(bookings => {
       if (!bookings.length) {
-        const seedBookings: Booking [] = [
-          {startDate: new Date('04/02/2018 09:00'), endDate:  new Date('04/05/2018'), carId: 1}
+        const seedBookings: Booking[] = [
+          { startDate: new Date('04/02/2018 09:00'), endDate: new Date('04/05/2018'), carId: 1 }
         ];
         seedBookings.forEach(booking => this.addBooking(booking));
       }
     });
   }
 
-  addBooking(booking: Booking): Observable<Booking []> {
+  addBooking(booking: Booking): Observable<Booking[]> {
     let oldBookings: Booking[] = JSON.parse(localStorage.getItem('bookings'));
     if (!oldBookings) {
       oldBookings = [];
@@ -34,22 +34,26 @@ export class BookingService {
   }
 
   getBookings(): Observable<Booking[]> {
-    const bookings: Booking []  = JSON.parse(localStorage.getItem('bookings'));
-    if ( !bookings) {
+    const bookings: Booking[] = JSON.parse(localStorage.getItem('bookings'));
+    if (!bookings) {
       return of([]);
     }
     // Construct real date objects from JSON.parser's returned date strings.
     bookings.forEach(booking => {
       booking.startDate = new Date(booking.startDate);
-      booking.endDate = new Date (booking.endDate);
+      booking.endDate = new Date(booking.endDate);
     });
     return of(bookings);
   }
 
   getBookingById(id): Observable<Booking> {
     // Local Storage does not allow get by booking id => get all and filter
-    const bookings: Booking []  = JSON.parse(localStorage.getItem('bookings'));
+    const bookings: Booking[] = JSON.parse(localStorage.getItem('bookings'));
     const foundBooking = bookings.find(booking => booking.id == id);
-    return  of(foundBooking);
+    if (!foundBooking) {
+      //throw .throw({ error: 'No Booking found' });
+      return throwError({ error: 'No Booking found' });
+    }
+    return of(foundBooking);
   }
 }

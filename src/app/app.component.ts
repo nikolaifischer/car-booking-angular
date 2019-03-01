@@ -22,6 +22,6 @@ export class AppComponent {
   }
 
   isHomePage() {
-    return this.router.isActive('/home', false);  
+    return this.router.isActive('/home', false);
   }
 }
