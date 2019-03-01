@@ -1,0 +1,64 @@
+<div *ngIf="showCar && car">
+  <app-car-information name="{{car.name}}" image="{{car.image}}" description="{{car.description}}" shortDescription="{{car.shortDescription}}"></app-car-information>
+  <div class="car-card-button-container">
+    <button mat-raised-button class="car-card-button" (click)="onBookNow()"> BOOK NOW </button>
+  </div>
+</div>
+
+<div *ngIf="!showCar">
+  <mat-horizontal-stepper [linear]="false" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Start Time</ng-template>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" [formControl]="startDateFormControl" [min]="minDate" [value]="startDate"
+            placeholder="Start Date" (dateInput)="onChangeDate($event)" (dateChange)="onChangeDate($event.value)">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="dateInvalid"> Please enter a valid date</mat-error>
+          <mat-error *ngIf="dateInThePast"> Please enter a date in the future</mat-error>
+        </mat-form-field>
+        <mat-form-field class="booking-start-time">
+          <input matInput type="time" value="09:00" placeholder="Select Time" (change)="onChangeStartTime($event.target.value)" />
+        </mat-form-field>
+        <div>
+          <button mat-button (click)="showCar = true">BACK</button>
+          <button mat-button matStepperNext>NEXT</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Duration</ng-template>
+        <mat-form-field>
+          <select matNativeControl required (change)="onChangeDuration($event.target.value)">
+            <option *ngFor="let number of [1,2,3,4,5,6,7]" value="{{number}}">{{number}} days</option>
+          </select>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>BACK</button>
+          <button mat-button matStepperNext>NEXT</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Confirm</ng-template>
+      <div>
+        <h3>Your Booking:</h3>
+        <p>
+          <span>Start:</span> {{startDate| date: 'MM/dd/yyyy HH:mm'}}
+        </p>
+        <p>
+          <span>End:</span> {{endDate | date: 'MM/dd/yyyy HH:mm'}}
+        </p>
+        <p>
+          <span>Duration:</span> {{duration}} days
+        </p>
+      </div>
+      <div>
+        <button mat-button matStepperPrevious>BACK</button>
+        <button mat-button (click)="onConfirmBooking()">CONFIRM</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>

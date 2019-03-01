@@ -1,0 +1,27 @@
+@import "../partials/colors";
+@import "../partials/breakpoints";
+
+body {
+    margin: 0;
+  }
+  
+
+  .content {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1px 16px;
+    height: 460px;
+    max-width: 60%;
+  }
+
+  .app-bottom-spacer {
+    min-height: 900px;
+  }
+
+  .homepage-decor {
+     background-color: $primary;
+  }
+
+
+

@@ -1,0 +1,16 @@
+.car-details-card img {
+    object-fit: cover;
+    object-position: 100% 50%;
+    width: 107%;
+    height: 300px;
+}
+
+.car-details-card {
+    max-width: 420px;
+    margin: auto;
+}
+
+.car-details-icon {
+    font-size: 30px;
+    line-height: 22px;
+}
