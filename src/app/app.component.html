@@ -6,32 +6,9 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
     crossorigin="anonymous">
 </head>
-
 <body>
-  <!--
-<div class="header">
-  <img src="assets/img/logo.png" class="logo"/>
-  <div class="header-right">
-    <span>Nikolai</span>
-    <span><i class="fas fa-user"></i></span>
-  </div>
-</div>
-
-<div class="sidebar">
-  <div class="sidebar-container">
-      <a [routerLinkActive]="['active']" routerLink="/home">Home</a>
-      <a [routerLinkActive]="['active']" routerLink="/cars">Available Cars</a>
-      <a [routerLinkActive]="['active']" routerLink="/bookings">My Bookings</a>
-  </div>
-</div>
-
-
-<div class = "content">
-      <router-outlet (activate)=onActivateRoute($event)></router-outlet>
-</div>
--->
   <mat-toolbar class="mat-elevation-z6" color="primary">
-    <span>Book A Car</span>
+    <span i18n="@@app-name">Car Booking</span>
   </mat-toolbar>
   <nav mat-tab-nav-bar>
     <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive #rla="routerLinkActive"

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="app-name" datatype="html">
+        <source>Car Booking</source>
+        <target> Car Booking </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="welcomeHeader" datatype="html">
+        <source>Welcome to Car Booking</source>
+        <target> Willkommen bei Car Booking </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/landing-page/landing-page.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="weclomeCTA" datatype="html">
+        <source>Book your favorite car and lets go!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/landing-page/landing-page.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="welcomeDescription" datatype="html">
+        <source>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac dui in tortor volutpat blandit nec eu est.
+           Phasellus convallis lectus ac molestie venenatis
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac dui in tortor volutpat blandit nec eu est.
+           Phasellus convallis lectus ac molestie venenatis.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/landing-page/landing-page.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="landing-message-header-left" datatype="html">
+        <source>
+        Rides on tap
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/landing-page/landing-page.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="landing-message-content-left" datatype="html">
+        <source>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac dui in tortor
+        volutpat blandit nec eu est. Phasellus convallis lectus ac molestie venenatis.
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/landing-page/landing-page.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="landing-message-header-middle" datatype="html">
+        <source>
+        Fair Prices
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/landing-page/landing-page.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="landing-message-content-middle" datatype="html">
+        <source>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac dui in tortor
+        volutpat blandit nec eu est. Phasellus convallis lectus ac molestie venenatis.
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/landing-page/landing-page.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="landing-message-header-right" datatype="html">
+        <source>
+        Safety first
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/landing-page/landing-page.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="landing-message-content-right" datatype="html">
+        <source>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac dui in tortor
+        volutpat blandit nec eu est. Phasellus convallis lectus ac molestie venenatis.
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/landing-page/landing-page.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="carListHeader" datatype="html">
+        <source>Available Cars</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-list/car-list.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="viewDetails" datatype="html">
+        <source>VIEW DETAILS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-list/car-list.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/booking-list/booking-list.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/booking-list/booking-list.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bookingListHeader" datatype="html">
+        <source>My Bookings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/booking-list/booking-list.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="upComingBookingsListHeader" datatype="html">
+        <source>Upcoming Bookings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/booking-list/booking-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="pastBookingsListHeader" datatype="html">
+        <source>Past Bookings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/booking-list/booking-list.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bookNow" datatype="html">
+        <source> BOOK NOW </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="startTime" datatype="html">
+        <source>Start Time</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dateInvalidMsg" datatype="html">
+        <source> Please enter a valid date</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dateInThePastMsg" datatype="html">
+        <source> Please enter a date in the future</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="back" datatype="html">
+        <source>BACK</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="next" datatype="html">
+        <source>NEXT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="duration" datatype="html">
+        <source>Duration</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="days" datatype="html">
+        <source>days</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="confirm" datatype="html">
+        <source>Confirm</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bookingConfirmationHeader" datatype="html">
+        <source>Your Booking:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="startDate" datatype="html">
+        <source>Start:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/booking-details/booking-details.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="endDate" datatype="html">
+        <source>End:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/booking-details/booking-details.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bookingDetailsHeader" datatype="html">
+        <source>Booking</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/booking-details/booking-details.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bookingDetailsCardTitle" datatype="html">
+        <source>Details</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/booking-details/booking-details.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
