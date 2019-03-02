@@ -13,7 +13,7 @@ import { CarDetail } from 'src/app/models/carDetail';
  */
 export class CarListComponent implements OnInit {
 
-  cars: CarSimple [];
+  cars: CarSimple[];
 
   constructor(private carsService: CarsService) { }
 
@@ -26,7 +26,7 @@ export class CarListComponent implements OnInit {
    */
   loadCars() {
     this.carsService.getCars().subscribe(cars => {
-       this.cars = this.sortCars(cars);
+      this.cars = this.sortCars(cars);
     }, error => {
       console.error('No cars found');
       this.cars = [];
@@ -38,12 +38,12 @@ export class CarListComponent implements OnInit {
    * @param cars the cars to be sorted
    * @returns cars sorted alphabetically by name.
    */
-  sortCars (cars: CarSimple[]): CarSimple[] {
+  sortCars(cars: CarSimple[]): CarSimple[] {
     return cars.sort((elementA, elementB) => {
       if (elementA.name.toUpperCase() < elementB.name.toUpperCase()) {
         return -1;
       }
-      if (elementA.name.toUpperCase() > elementA.name.toUpperCase()) {
+      if (elementA.name.toUpperCase() > elementB.name.toUpperCase()) {
         return 1;
       }
       return 0;

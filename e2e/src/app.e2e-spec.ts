@@ -81,8 +81,11 @@ describe('/cars tests', () => {
   it('should step through the booking process', () => {
     page.navigateTo('/cars/details/5');
     page.openBookingDialog();
+    browser.sleep(1000);
     page.getFirstStepNextButton().click();
+    browser.sleep(1000);
     page.getSecondtStepNextButton().click();
+    browser.sleep(1000);
     const confirmBtn = page.getConfirmButton();
     expect(confirmBtn).toBeDefined();
     expect(page.getBookingConfirmationStartDate().getText()).toContain('9:00');
