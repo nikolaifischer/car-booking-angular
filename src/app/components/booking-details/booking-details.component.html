@@ -2,7 +2,9 @@
   <div class="headline-container">
     <h1 i18n="@@bookingDetailsHeader">Booking</h1>
   </div>
-  <div *ngIf="showNoBookingError"> <h2> Error: No Booking found for this ID!</h2></div>
+  <div *ngIf="showNoBookingError">
+    <h2> Error: No Booking found for this ID!</h2>
+  </div>
   <mat-card *ngIf="booking" class="booking-details-card">
     <mat-card-header>
       <div mat-card-avatar><i class="fas fa-info booking-details-icon"></i></div>
@@ -19,6 +21,8 @@
   </mat-card>
   <app-car-information *ngIf="car" name="{{car.name}}" description="{{car.description}}" image="{{car.image}}"
     shortDescription="{{car.shortDescription}}"></app-car-information>
-  <div *ngIf="showNoCarError"> <h2> Error: No Car found for this Booking!</h2></div>
+  <div *ngIf="showNoCarError">
+    <h2> Error: No Car found for this Booking!</h2>
+  </div>
 
 </div>

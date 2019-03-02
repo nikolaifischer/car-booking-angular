@@ -5,6 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss']
 })
+/**
+ * Component that renders the Landing Page
+ */
 export class LandingPageComponent implements OnInit {
 
   constructor() { }

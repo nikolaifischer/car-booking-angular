@@ -1,37 +1,41 @@
 @import './../../../partials/breakpoints';
-.car-card-button-container{
-    text-align: center;
-    margin-top: 20px;
+
+.car-card-button-container {
+  text-align: center;
+  margin-top: 20px;
 }
 
 .car-card-button {
-    display: inline-block;
+  display: inline-block;
 }
 
 .booking-start-time {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .start-time-input {
-    margin-left: 40px;
+  margin-left: 40px;
 }
 
 .booking-button {
-    margin: 10px;
+  margin: 10px;
 }
+
 .stepper-group {
-    min-height: 220px;
+  min-height: 220px;
 }
 
 @include breakpoint(mobile) {
-    .start-date-form-group {
-        display: flex;
-        flex-direction: column;
-    }
-    .mat-step-header{
-        font-size: 4px !important;
-    }
-    .start-time-input {
-        margin-left: 0px;
-    }
+  .start-date-form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mat-step-header {
+    font-size: 4px !important;
+  }
+
+  .start-time-input {
+    margin-left: 0px;
+  }
 }

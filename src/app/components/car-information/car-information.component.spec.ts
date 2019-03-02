@@ -1,23 +1,13 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CarInformationComponent } from './car-information.component';
-import { MatCardModule } from '@angular/material';
+
+/**
+ * Unit Tests for Car Information Component
+ */
 describe('CarInformationComponent', () => {
   let component: CarInformationComponent;
-  let fixture: ComponentFixture<CarInformationComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ CarInformationComponent ],
-      imports: [MatCardModule]
-    })
-    .compileComponents();
-  }));
 
   beforeEach(() => {
-    //fixture = TestBed.createComponent(CarInformationComponent);
-    //component = fixture.componentInstance;
-    //fixture.detectChanges();
     component = new CarInformationComponent();
   });
 

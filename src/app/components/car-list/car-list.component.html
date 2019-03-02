@@ -1,12 +1,13 @@
 <div>
   <div class="headline-container">
-      <h1 i18n="@@carListHeader">Available Cars</h1>
+    <h1 i18n="@@carListHeader">Available Cars</h1>
   </div>
-    <mat-card class="car-list-card" mat-ripple *ngFor = "let car of cars" >
-        <mat-card-header>
-            <mat-card-title class="car-list-name">{{car.name}}</mat-card-title>
-            <mat-card-subtitle  class="car-list-description">{{car.shortDescription}}</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-actions class="car-list-actions"> <button mat-raised-button routerLink="./details/{{car.id}}" i18n="@@viewDetails">VIEW DETAILS</button></mat-card-actions>
-    </mat-card>
+  <mat-card class="car-list-card" mat-ripple *ngFor="let car of cars">
+    <mat-card-header>
+      <mat-card-title>{{car.name}}</mat-card-title>
+      <mat-card-subtitle>{{car.shortDescription}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions class="car-list-actions"> <button mat-raised-button routerLink="./details/{{car.id}}" i18n="@@viewDetails">VIEW
+        DETAILS</button></mat-card-actions>
+  </mat-card>
 </div>

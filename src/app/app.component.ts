@@ -6,6 +6,9 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+/**
+ * Main Component of this app. Renders navigation.
+ */
 export class AppComponent {
   constructor(private router: Router){}
   title = 'car-booking-angular';
@@ -21,7 +24,12 @@ export class AppComponent {
     window.scroll(0, 0);
   }
 
-  isHomePage() {
+  /**
+   * Returns true if the current page is the homepage.
+   * Is used to render decorative elements on the homepage that should not display on other routes.
+   * @returns true if current page is the homepage, false if not.
+   */
+  isHomePage(): boolean {
     return this.router.isActive('/home', false);
   }
 }

@@ -1,24 +1,19 @@
-<!DOCTYPE html>
-<html>
+<mat-toolbar class="mat-elevation-z6" color="primary">
+  <span i18n="@@app-name" class="app-name">Car Booking</span>
+</mat-toolbar>
+<nav mat-tab-nav-bar>
+  <a i18n="@@homeRoute" mat-tab-link routerLink="/home" routerLinkActive #rla1="routerLinkActive" [active]="rla1.isActive">
+    Home
+  </a>
+  <a i18n="@@carsRoute" mat-tab-link routerLink="/cars" routerLinkActive #rla2="routerLinkActive" [active]="rla2.isActive">
+    Available Cars
+  </a>
+  <a i18n="@@bookingsRoute" mat-tab-link routerLink="/bookings" routerLinkActive #rla3="routerLinkActive" [active]="rla3.isActive">
+    My Bookings
+  </a>
+</nav>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-  <mat-toolbar class="mat-elevation-z6" color="primary">
-    <span i18n="@@app-name" class="app-name">Car Booking</span>
-  </mat-toolbar>
-  <nav mat-tab-nav-bar>
-    <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive #rla="routerLinkActive"
-      [active]="rla.isActive">
-      {{link.label}}
-    </a>
-  </nav>
-
-  <div class="content">
-    <router-outlet (activate)=onActivateRoute($event)></router-outlet>
-  </div>
-  <div class ="app-bottom-spacer"  [ngClass]="{'homepage-decor': isHomePage()}"></div>
-</body>
-
-</html>
+<div class="content">
+  <router-outlet (activate)=onActivateRoute($event)></router-outlet>
+</div>
+<div class="app-bottom-spacer" [ngClass]="{'homepage-decor': isHomePage()}"></div>

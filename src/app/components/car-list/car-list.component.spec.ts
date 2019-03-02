@@ -1,19 +1,12 @@
 import { async,  TestBed, flushMicrotasks, fakeAsync } from '@angular/core/testing';
-
 import { CarListComponent } from './car-list.component';
-import { MatCardModule } from '@angular/material';
 import { of } from 'rxjs';
-import { RouterTestingModule } from '@angular/router/testing';
 
+/**
+ * Unit Tests for Car List Component
+ */
 describe('CarListComponent', () => {
   let component: CarListComponent;
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [CarListComponent],
-      imports: [MatCardModule, RouterTestingModule]
-    })
-      .compileComponents();
-  }));
 
   beforeEach(() => {
     // Mock the Car Service with a Spy
@@ -36,6 +29,7 @@ describe('CarListComponent', () => {
       }
     ];
     carServiceSpy.getCars.and.returnValue(of(stubValue));
+
     component = new CarListComponent(carServiceSpy);
   });
 

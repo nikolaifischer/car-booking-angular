@@ -4,50 +4,50 @@
     <button mat-raised-button class="car-card-button" (click)="onBookNow()" i18n="@@bookNow"> BOOK NOW </button>
   </div>
 </div>
-<div *ngIf="showNoCarError"> 
+<div *ngIf="showNoCarError">
   <h2 i18n="@@noCarError">Error: No Car with this ID found</h2>
 </div>
 
-<div id = "booking-dialog" *ngIf="!showCar">
+<div id="booking-dialog" *ngIf="!showCar">
   <mat-horizontal-stepper [linear]="false" #stepper>
-    <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup">
+    <mat-step [stepControl]="startDateFormGroup">
+      <form [formGroup]="startDateFormGroup">
         <ng-template matStepLabel class="stepper-label" i18n="@@startTime">Start Time</ng-template>
-        <div class = "start-date-form-group stepper-group" >
-            <h3 i18n="@@startTime">Start Time:</h3>
-            <mat-form-field>
-                <input matInput [matDatepicker]="picker" [formControl]="startDateFormControl" [min]="minDate" [value]="startDate"
-                  placeholder="Start Date" (dateInput)="onChangeDate($event)" (dateChange)="onChangeDate($event.value)">
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-                <mat-error *ngIf="dateInvalid" i18n="@@dateInvalidMsg"> Please enter a valid date</mat-error>
-                <mat-error *ngIf="dateInThePast"i18n="@@dateInThePastMsg"> Please enter a date in the future</mat-error>
-              </mat-form-field>
-              <mat-form-field class="start-time-input">
-                <input matInput type="time" value="09:00" placeholder="Select Time" (change)="onChangeStartTime($event.target.value)" />
-              </mat-form-field>
-          </div>
+        <div class="start-date-form-group stepper-group">
+          <h3 i18n="@@startTime">Start Time:</h3>
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker" [formControl]="startDateFormControl" [min]="minDate" [value]="startDate"
+              placeholder="Start Date" (dateInput)="onChangeDate($event)" (dateChange)="onChangeDate($event.value)">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="dateInvalid" i18n="@@dateInvalidMsg"> Please enter a valid date</mat-error>
+            <mat-error *ngIf="dateInThePast" i18n="@@dateInThePastMsg"> Please enter a date in the future</mat-error>
+          </mat-form-field>
+          <mat-form-field class="start-time-input">
+            <input matInput type="time" value="09:00" placeholder="Select Time" (change)="onChangeStartTime($event.target.value)" />
+          </mat-form-field>
+        </div>
         <div>
-          <button class = "booking-button" mat-raised-button (click)="showCar = true" i18n="@@back">BACK</button>
-          <button id = "next-button-1" class = "booking-button" mat-raised-button matStepperNext i18n="@@next">NEXT</button>
+          <button class="booking-button" mat-raised-button (click)="showCar = true" i18n="@@back">BACK</button>
+          <button id="next-button-1" class="booking-button" mat-raised-button matStepperNext i18n="@@next">NEXT</button>
         </div>
       </form>
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup">
-      <form [formGroup]="secondFormGroup">
+    <mat-step [stepControl]="durationFormGroup">
+      <form [formGroup]="durationFormGroup">
         <ng-template matStepLabel i18n="@@duration">Duration</ng-template>
-        <div class = "stepper-group">
-            <h3 i18n="@@duration">Duration:</h3>
-            <mat-form-field>
-                <select matNativeControl required (change)="onChangeDuration($event.target.value)">
-                  <option *ngFor="let number of [1,2,3,4,5,6,7]" value="{{number}}">{{number}} <span i18n="@@days">days</span></option>
-                </select>
-              </mat-form-field>
+        <div class="stepper-group">
+          <h3 i18n="@@duration">Duration:</h3>
+          <mat-form-field>
+            <select matNativeControl required (change)="onChangeDuration($event.target.value)">
+              <option *ngFor="let number of [1,2,3,4,5,6,7]" value="{{number}}">{{number}} <span i18n="@@days">days</span></option>
+            </select>
+          </mat-form-field>
         </div>
 
         <div>
-          <button class = "booking-button" mat-raised-button matStepperPrevious i18n="@@back">BACK</button>
-          <button id = "next-button-2" class = "booking-button" mat-raised-button matStepperNext i18n="@@next">NEXT</button>
+          <button class="booking-button" mat-raised-button matStepperPrevious i18n="@@back">BACK</button>
+          <button id="next-button-2" class="booking-button" mat-raised-button matStepperNext i18n="@@next">NEXT</button>
         </div>
       </form>
     </mat-step>
@@ -66,8 +66,8 @@
         </p>
       </div>
       <div>
-        <button class = "booking-button" mat-raised-button matStepperPrevious i18n="@@back">BACK</button>
-        <button class = "booking-button" mat-raised-button (click)="onConfirmBooking()" i18n="@@confirm">CONFIRM</button>
+        <button class="booking-button" mat-raised-button matStepperPrevious i18n="@@back">BACK</button>
+        <button class="booking-button" mat-raised-button (click)="onConfirmBooking()" i18n="@@confirm">CONFIRM</button>
       </div>
     </mat-step>
   </mat-horizontal-stepper>

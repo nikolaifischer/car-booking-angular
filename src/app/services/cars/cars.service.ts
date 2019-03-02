@@ -8,16 +8,27 @@ import { AppSettings } from 'src/app/app.settings';
 @Injectable({
   providedIn: 'root'
 })
+/**
+ * This service gets cars from the backend.
+ */
 export class CarsService {
   constructor(private http: HttpClient) { }
 
+  /**
+   * Gets all cars from the backend as a simple representation
+   * @returns An Observable of all Cars without details.
+   */
   getCars(): Observable<CarSimple []> {
     return this.http.get<CarSimple[]>(AppSettings.API_CAR_ENDPOINT + '.json');
   }
 
-  getCarById(id: number) {
+  /**
+   * Gets a specific car with all details by its ID
+   * @param id the id of the car
+   * @returns An Observable of the car with all details.
+   */
+  getCarById(id: number): Observable<CarDetail> {
     const query = AppSettings.API_CAR_ENDPOINT + `/${id}.json`;
     return this.http.get<CarDetail>(query);
-
   }
 }

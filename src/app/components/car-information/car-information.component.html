@@ -1,13 +1,14 @@
 <mat-card class="car-details-card">
-    <mat-card-header>
-      <div mat-card-avatar><i class="fas fa-car car-details-icon"></i></div>
-      <mat-card-title>{{name}}</mat-card-title>
-      <mat-card-subtitle>{{shortDescription}} </mat-card-subtitle>
-    </mat-card-header>
-    <img *ngIf= "image" mat-card-image [src]="image" (error)="this.image ='https://via.placeholder.com/400/FFFFFF?text=No Image Available'" alt="Image of the car">
-    <mat-card-content>
-      <p>
-        {{description}}
-      </p>
-    </mat-card-content>
-  </mat-card>
+  <mat-card-header>
+    <div mat-card-avatar><i class="fas fa-car car-details-icon"></i></div>
+    <mat-card-title>{{name}}</mat-card-title>
+    <mat-card-subtitle>{{shortDescription}} </mat-card-subtitle>
+  </mat-card-header>
+  <img *ngIf="image" mat-card-image [src]="image" (error)="this.image ='https://via.placeholder.com/400/FFFFFF?text=No Image Available'"
+    alt="Image of the car">
+  <mat-card-content>
+    <p>
+      {{description}}
+    </p>
+  </mat-card-content>
+</mat-card>

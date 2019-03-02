@@ -2,36 +2,32 @@
 @import "../partials/breakpoints";
 
 body {
-    margin: 0;
-  }
-  
-
-  .content {
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1px 16px;
-    height: 460px;
-    max-width: 60%;
-  }
-
-  @include breakpoint(mobile) {
-    .content {
-        max-width: 100%;
-    }
+  margin: 0;
 }
 
-  .app-bottom-spacer {
-    min-height: 900px;
+.content {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1px 16px;
+  height: 460px;
+  max-width: 60%;
+}
+
+@include breakpoint(mobile) {
+  .content {
+    max-width: 100%;
   }
+}
 
-  .homepage-decor {
-     background-color: $primary;
-  }
+.app-bottom-spacer {
+  min-height: 900px;
+}
 
-  .app-name {
-    margin-left: 10px;
-  }
+.homepage-decor {
+  background-color: $primary;
+}
 
-
-
+.app-name {
+  margin-left: 10px;
+}

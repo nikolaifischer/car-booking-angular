@@ -1,10 +1,13 @@
+
+/**
+ * Basic Express Server - allows serving of built version of the app
+ */
 //Install express server
 const express = require('express');
 const path = require('path');
 
 const app = express();
 
-// Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/en'));
 
 app.get('/*', function(req,res) {
@@ -12,5 +15,4 @@ app.get('/*', function(req,res) {
 res.sendFile(path.join(__dirname+'/dist/en/index.html'));
 });
 
-// Start the app by listening on the default Heroku port
 app.listen(process.env.PORT || 8080);

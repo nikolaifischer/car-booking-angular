@@ -1,8 +1,10 @@
 import { TestBed } from '@angular/core/testing';
-
 import { BookingService } from './booking.service';
 import { Booking } from 'src/app/models/booking';
 
+/**
+ * Unit Tests for Booking Service
+ */
 let service: BookingService;
 describe('BookingService', () => {
   beforeEach(() => {

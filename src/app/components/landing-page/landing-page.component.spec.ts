@@ -1,8 +1,10 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { async, TestBed } from '@angular/core/testing';
 import { LandingPageComponent } from './landing-page.component';
 import { MatCardModule } from '@angular/material';
 
+/**
+ * Unit Tests for Landing Page Component
+ */
 describe('LandingPageComponent', () => {
   let component: LandingPageComponent;
 

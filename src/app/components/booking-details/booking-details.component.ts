@@ -10,19 +10,28 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './booking-details.component.html',
   styleUrls: ['./booking-details.component.scss']
 })
+/**
+ * Component that shows Details of a booking including the selected car.
+ */
 export class BookingDetailsComponent implements OnInit {
 
+  // Template Flags
   showNoBookingError = false;
   showNoCarError = false;
+
+  // Models
   car: CarDetail;
   booking: Booking;
-  id: number;
+
   constructor(private bookingService: BookingService, private carService: CarsService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.loadBookingAndCar();
   }
 
+  /**
+   * Loads Booking and Car Object from the Service. ID of the booking is determined by the url parameter.
+   */
   loadBookingAndCar() {
     this.route.params.subscribe(params => {
       const bookingId = params['id'];
@@ -40,7 +49,4 @@ export class BookingDetailsComponent implements OnInit {
       });
     });
   }
-
-
-
 }

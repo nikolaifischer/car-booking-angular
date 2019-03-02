@@ -6,6 +6,9 @@ import { Observable, of, throwError } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+/**
+ * This service adds and gets bookings from the browser's local storage.
+ */
 export class BookingService {
   constructor() {
     // For prototype-presentation only:
@@ -20,6 +23,11 @@ export class BookingService {
     });
   }
 
+  /**
+   * Adds a Booking to the browser's storage
+   * @param booking the Booking to be added.
+   * @returns an Observable containing all bookings including the added Booking
+   */
   addBooking(booking: Booking): Observable<Booking[]> {
     let oldBookings: Booking[] = JSON.parse(localStorage.getItem('bookings'));
     if (!oldBookings) {
@@ -33,6 +41,10 @@ export class BookingService {
     return of(oldBookings);
   }
 
+  /**
+   * Gets all Bookings.
+   * @returns  an Observable containing all bookings.
+   */
   getBookings(): Observable<Booking[]> {
     const bookings: Booking[] = JSON.parse(localStorage.getItem('bookings'));
     if (!bookings) {
@@ -46,12 +58,18 @@ export class BookingService {
     return of(bookings);
   }
 
+  /**
+   * Gets a Booking by it's ID.
+   * 
+   * @param id the ID of the booking
+   * @returns an Observable of the found booking
+   * @throws an Error if no booking  with the id is found
+   */
   getBookingById(id): Observable<Booking> {
     // Local Storage does not allow get by booking id => get all and filter
     const bookings: Booking[] = JSON.parse(localStorage.getItem('bookings'));
     const foundBooking = bookings.find(booking => booking.id == id);
     if (!foundBooking) {
-      //throw .throw({ error: 'No Booking found' });
       return throwError({ error: 'No Booking found' });
     }
     return of(foundBooking);

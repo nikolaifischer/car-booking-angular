@@ -1,38 +1,32 @@
-import { async, ComponentFixture, TestBed, flushMicrotasks, fakeAsync } from '@angular/core/testing';
-
+import { flushMicrotasks, fakeAsync } from '@angular/core/testing';
 import { CarDetailsComponent } from './car-details.component';
 import { of } from 'rxjs';
-import { CarInformationComponent } from '../car-information/car-information.component';
-import {  MatCardModule, MatStepperModule, MatFormFieldModule, MatInputModule,
-          MatNativeDateModule, MatDatepickerModule } from '@angular/material';
-import {Router} from '@angular/router';
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import { Booking } from 'src/app/models/booking';
+
+
+/**
+ * Unit Tests for the CarDetailsComponent
+ */
 
 describe('CarDetailsComponent', () => {
   let component: CarDetailsComponent;
+
+  // Objects for calls to simulated services
   const getCarStubValue = {
     'id': 3,
     'name': 'The intive_Kupferwerk car',
     'shortDescription': 'Transporter',
     'description': 'Lorem ipsum dolor sit amet.',
     'image': 'images/healthcare.jpg'
-    };
-  const addBookingStubValue: Booking  = {
+  };
+  const addBookingStubValue: Booking = {
     id: 1,
     startDate: new Date('04/04/2020 13:00'),
-    endDate: new Date('04/05/2020 13:00' ),
+    endDate: new Date('04/05/2020 13:00'),
     carId: 2
   };
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ CarDetailsComponent, CarInformationComponent ],
-      imports: [ReactiveFormsModule, MatCardModule, MatStepperModule, MatFormFieldModule, MatInputModule, MatDatepickerModule,
-        MatNativeDateModule]
-    })
-    .compileComponents();
-  }));
 
   beforeEach(() => {
     const carServiceSpy = jasmine.createSpyObj('CarService', ['getCarById']);
@@ -41,7 +35,7 @@ describe('CarDetailsComponent', () => {
     bookingServiceSpy.addBooking.and.returnValue(of(addBookingStubValue));
     const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
     routerSpy.navigateByUrl.and.returnValue();
-    const activatedRouteSpy =  {params: of({id: 3})} as any;
+    const activatedRouteSpy = { params: of({ id: 3 }) } as any;
     const formBuilder = new FormBuilder();
     component = new CarDetailsComponent(carServiceSpy, bookingServiceSpy, activatedRouteSpy, formBuilder, routerSpy);
   });
@@ -50,9 +44,10 @@ describe('CarDetailsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should load car details', fakeAsync (() => {
+  it('should load car details', fakeAsync(() => {
     component.ngOnInit();
     flushMicrotasks();
+    
     expect(component.car).toEqual(getCarStubValue, 'correct car details');
     expect(component.car.id).toBe(3);
   }));

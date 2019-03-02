@@ -1,14 +1,16 @@
-import { async, ComponentFixture, TestBed, fakeAsync, flushMicrotasks } from '@angular/core/testing';
-
+import { fakeAsync, flushMicrotasks } from '@angular/core/testing';
 import { BookingListComponent } from './booking-list.component';
-import { MatListModule } from '@angular/material';
 import { Booking } from 'src/app/models/booking';
 import { of } from 'rxjs';
-import { RouterTestingModule } from '@angular/router/testing';
 import { CarDetail } from 'src/app/models/carDetail';
 
+/**
+ * Unit Tests for BookingListComponent
+ */
 describe('BookingListComponent', () => {
   let component: BookingListComponent;
+
+  // Objects for simulated service calls by stubs:
   const addBookingStubValue: Booking = {
     id: 1,
     startDate: new Date('04/04/2220 13:00'),
@@ -38,15 +40,6 @@ describe('BookingListComponent', () => {
     'image': 'images/healthcare.jpg'
   };
 
-  beforeEach(async(() => {
-
-    TestBed.configureTestingModule({
-      declarations: [BookingListComponent],
-      imports: [MatListModule, RouterTestingModule]
-    })
-      .compileComponents();
-  }));
-
   beforeEach(() => {
     const bookingServiceSpy = jasmine.createSpyObj('BookingService', ['getBookings']);
     bookingServiceSpy.getBookings.and.returnValue(of(getBookingsStubValue));
@@ -65,6 +58,7 @@ describe('BookingListComponent', () => {
 
     const expected: Booking[] = getBookingsStubValue;
     const actual: Booking[] = Array.from(component.carLookUp.keys());
+
     expect(actual).toEqual(expected);
   }));
 
@@ -74,6 +68,7 @@ describe('BookingListComponent', () => {
 
     const expected: CarDetail = getCarStubValue;
     const actual: CarDetail = component.carLookUp.get(getBookingsStubValue[0]);
+
     expect(actual).toEqual(expected);
   }));
 
