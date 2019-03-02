@@ -228,7 +228,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="startDate" datatype="html">
-        <source>Start:</source>
+        <source>Start</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
           <context context-type="linenumber">49</context>
@@ -239,7 +239,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="endDate" datatype="html">
-        <source>End:</source>
+        <source>End</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/car-details/car-details.component.html</context>
           <context context-type="linenumber">52</context>
@@ -263,6 +263,7 @@
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
+
     </body>
   </file>
 </xliff>

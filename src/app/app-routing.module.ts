@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { CarListComponent } from './components/car-list/car-list.component';

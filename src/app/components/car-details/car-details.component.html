@@ -40,7 +40,7 @@
           <h3 i18n="@@duration">Duration:</h3>
           <mat-form-field>
             <select matNativeControl required (change)="onChangeDuration($event.target.value)">
-              <option *ngFor="let number of [1,2,3,4,5,6,7]" value="{{number}}">{{number}} <span i18n="@@days">days</span></option>
+              <option *ngFor="let number of [1,2,3,4,5,6,7]" value="{{number}}">{{number}} <span i18n="@@days">day(s)</span></option>
             </select>
           </mat-form-field>
         </div>
@@ -56,13 +56,13 @@
       <div class="stepper-group">
         <h3 i18n="@@bookingConfirmationHeader">Your Booking:</h3>
         <p>
-          <span i18n="@@startDate">Start: </span><span>{{startDate| date: 'MM/dd/yyyy HH:mm'}}</span>
+          <span i18n="@@startDate">Start</span>: <span id="start-date-confirmation">{{startDate| date: 'MM/dd/yyyy HH:mm'}}</span>
         </p>
         <p>
-          <span i18n="@@endDate">End: </span><span>{{endDate | date: 'MM/dd/yyyy HH:mm'}}</span>
+          <span i18n="@@endDate">End</span>: <span id="end-date-confirmation">{{endDate | date: 'MM/dd/yyyy HH:mm'}}</span>
         </p>
         <p>
-          <span i18n="@@duration">Duration: </span> <span>{{duration}}</span> <span i18n="@@days">days</span>
+          <span i18n="@@duration">Duration</span>: <span id="duration-confirmation">{{duration}}</span> <span i18n="@@days">day(s)</span>
         </p>
       </div>
       <div>

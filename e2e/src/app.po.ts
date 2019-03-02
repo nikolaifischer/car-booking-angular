@@ -57,15 +57,15 @@ export class AppPage {
   }
 
   getBookingConfirmationStartDate() {
-    return element(by.css('#cdk-step-content-0-2 > div.stepper-group.ng-star-inserted > p:nth-child(2) > span:nth-child(2)'));
+    return element(by.css('#start-date-confirmation'));
   }
 
   getBookingConfirmationEndDate() {
-    return element(by.css('#cdk-step-content-0-2 > div.stepper-group.ng-star-inserted > p:nth-child(3) > span:nth-child(2)'));
+    return element(by.css('#end-date-confirmation'));
   }
 
   getBookingConfirmationDuration() {
-    return element(by.css('#cdk-step-content-0-2 > div.stepper-group.ng-star-inserted > p:nth-child(4) > span:nth-child(2)'));
+    return element(by.css('#duration-confirmation'));
   }
 
   getBookingListHeadline() {
