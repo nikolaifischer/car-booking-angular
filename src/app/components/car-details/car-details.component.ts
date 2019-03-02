@@ -36,6 +36,7 @@ export class CarDetailsComponent implements OnInit {
   startDateFormGroup: FormGroup;
   durationFormGroup: FormGroup;
   startDateFormControl = new FormControl(this.startDate);
+  minDate = new Date();
 
   constructor(private carService: CarsService, private bookingService: BookingService,
     private route: ActivatedRoute, private formBuilder: FormBuilder, private router: Router) { }
